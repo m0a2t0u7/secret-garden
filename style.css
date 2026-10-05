@@ -51,3 +51,25 @@ dialog[open]{animation:dialog-bloom .25s ease-out}@keyframes dialog-bloom{from{o
 
 .play-guide{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:14px;margin:0 0 16px;border:3px double #a6ad72;border-radius:18px;background:#fff7df;color:#405733;box-shadow:0 3px 9px #17341c45}.play-guide strong,.play-guide span{grid-column:1/-1}.play-guide strong{font-size:17px}.play-guide span{font-size:13px}.play-guide button{font-size:13px;padding:9px 6px}.gacha-actions{display:grid;gap:10px;margin-top:12px}.gacha-actions button{width:100%;font-size:17px;padding:12px}.gacha-actions .secondary{background:#fff5d9;border:2px solid #bdab72}.draw-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.draw-result{min-width:0;position:relative;padding:6px;border:2px solid #cbbb85;border-radius:13px;background:#fff9e8;animation:plant-bloom .5s ease-out var(--reveal-delay) both}.draw-result .plant-art{width:100%;margin:0!important}.draw-result strong,.draw-result small{display:block;font-size:12px}.draw-result small{color:#728142}.draw-result.new-plant{border-color:#668b41;box-shadow:0 0 7px #a8bd6080}.draw-again{display:block;margin:18px auto 0}.guide-dialog ol{padding-left:24px}.guide-dialog li{margin-bottom:16px}.guide-dialog li p{margin:5px 0;font-size:14px;line-height:1.7}.guide-dialog>button{display:block;width:100%;margin-top:10px}.gift-message{padding:13px;border-radius:14px;background:#e7eed5;color:#375f30;font-weight:bold}
 @media(hover:none) and (pointer:coarse){.play-guide strong{font-size:3.8cqw}.play-guide span,.play-guide button{font-size:3.2cqw}.gacha-actions button{font-size:4cqw}}
+
+/* Readable dialogs on phones, including desktop-site mode. */
+dialog{width:min(720px,calc(100% - 24px));max-height:90vh;max-height:90dvh;padding:24px;font-size:18px;overscroll-behavior:contain;scrollbar-gutter:stable}
+dialog h2{font-size:28px;line-height:1.45}dialog p,.guide-dialog li p{font-size:17px;line-height:1.8}dialog .kicker{font-size:15px}dialog button{min-height:48px;font-size:18px}.guide-dialog ol{padding-left:26px}.guide-dialog li{margin-bottom:20px}.guide-dialog li strong{font-size:19px}.close{min-width:120px}
+.draw-result strong,.draw-result small{font-size:15px;line-height:1.6}.draw-results{gap:12px}
+@media(max-width:600px),(hover:none) and (pointer:coarse){
+ dialog{width:94vw;max-width:none;margin:auto;padding:4vw;border-radius:22px;font-size:max(17px,4.3vw);max-height:90dvh;scrollbar-gutter:auto}
+ dialog h2{font-size:max(24px,5.7vw);line-height:1.4;margin:12px 0}
+ dialog p,.guide-dialog li p{font-size:inherit;line-height:1.8}
+ dialog .kicker{font-size:max(14px,3.5vw)}
+ .guide-dialog li strong{font-size:max(19px,4.8vw)}
+ .guide-dialog ol{padding-left:6vw}.guide-dialog li{margin-bottom:5vw}
+ dialog .primary,dialog .secondary,dialog .close{font-size:max(17px,4.3vw);min-height:max(50px,12vw);padding:3vw 4vw;border-radius:8vw}
+ dialog .plant-art{width:42vw;max-width:100%;margin:0 auto 12px}
+ .draw-results{grid-template-columns:repeat(2,minmax(0,1fr));gap:3vw}
+ .draw-result{padding:2vw;border-radius:3vw}.draw-result strong,.draw-result small{font-size:max(15px,3.8vw);line-height:1.6}
+ .guide-dialog>button{margin-top:3vw}.gift-message{padding:3vw}.close{margin-top:4vw}
+ .content:not(.garden-content){font-size:max(16px,4vw)}.intro h2{font-size:max(28px,6vw)}.quiz-panel h3{font-size:max(21px,5vw)}.quiz-panel .options button,.quiz-panel .primary{font-size:max(17px,4.3vw);min-height:max(50px,12vw)}
+ .plant-card strong{font-size:max(15px,3.8vw)}.plant-card small,.badge{font-size:max(12px,3vw)}
+ .play-guide span,.play-guide button{font-size:max(15px,3.8vw)}.play-guide strong{font-size:max(17px,4.3vw)}.play-guide button{min-height:48px}
+ .today p{font-size:max(16px,4vw)}.today .kicker{font-size:max(14px,3.5vw)}
+}
